@@ -6,7 +6,7 @@ Hem utilitzat gràfics o diagrames triangulars, ja que permeten representar la d
 
 En un diagrama triangular, els punts més propers als vèrtexs o als eixos són aquells que tenen una distribuició entre les tres variables és més desigual. En canvi, els punts més propers al centre són aquells on les tres variables que el conformen tenen un valor similar. 
 
-La suma de les tres variables ha de ser 100. Per això, en aquest cas calculem quin percentatge tindria cada partit si el total fos només la suma dels 3. Per exemple, a Granollers ERC va obtenir un 21.87% dels vots, JxCat un 13.52% i la CUP un 5.74%. El total suma %, per tant podriem dir que ERC va obtenir un % dels vots independentistes, JxCat un % i la CUP un %. Són aquests valors els que es dibuixen sobre els triangles. 
+La suma de les tres variables ha de ser 100. Per això, en aquest cas calculem quin percentatge tindria cada partit si el total fos només la suma dels 3. Per exemple, a Granollers ERC va obtenir un 21,87% dels vots, JxCat un 13,52% i la CUP un 5,74%. El total suma el 41,18% dels vots vàlids, per tant podriem dir que ERC va obtenir un 53% dels vots independentistes, JxCat un 33% i la CUP un 14%. Són aquests valors els que es dibuixen sobre el triangle.
 
 Podeu veure com hem fet els gràfics amb el llenguatge d'anàlisi de dades R <a href="https://github.com/PeriodismePlural/AnalisiElectoral-28Avs10N/blob/master/analisi_10N_28A.Rmd" target="_blank">en aquest document</a> i reproduir-lo. 
 
