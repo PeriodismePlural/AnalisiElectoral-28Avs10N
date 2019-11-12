@@ -1,0 +1,165 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+# Carregar llibreries
+
+library(tidyverse)
+library(ggtern)
+```
+
+Importar les dades de les dues eleccions:
+
+```{r}
+cat10n <- read.csv("Resultats10N_Catalunya.csv", encoding = "UTF-8")
+cat28a <- read.csv("Resultats28A_Catalunya.csv", encoding = "UTF-8")
+```
+
+### Anàlisi partits independentistes
+
+```{r}
+cat10nIndepe <- select(cat10n, municipi, ptg_erc, ptg_jxcat, ptg_cup)
+cat28aIndepe <- select(cat28a, municipi, ptg_erc, ptg_jxcat, ptg_fr)
+
+# Unir CUP i FR
+colnames(cat10nIndepe)[4] <- "ptg_cupfr"
+colnames(cat28aIndepe)[4] <-"ptg_cupfr"
+```
+
+Buscar partit guanyador entre els tres:
+
+```{r}
+cat10nIndepe$primer <- colnames(cat10nIndepe[2:4])[apply(cat10nIndepe[2:4],1,which.max)]
+
+cat28aIndepe$primer <- colnames(cat28aIndepe[2:4])[apply(cat28aIndepe[2:4],1,which.max)]
+```
+
+Gràfics triangular:
+
+```{r}
+#Paleta colors partits independentistes
+
+paleta_partits_indepe <- c(
+  "percentatge_jxcat" = "#fc3a85",
+  "percentatge_erc" = "#faab00", 
+  "percentatge_cupfr" = "#ffe20a"
+)
+```
+
+```{r}
+#10Nindepe
+
+ggtern(data=cat10nIndepe, aes(x=ptg_jxcat, y=ptg_erc, z=ptg_cupfr, fill=primer, colour=primer)) +
+  geom_point(shape = 21, alpha = 0.5, size=0.9) +
+  theme(legend.position = "none")  + 
+  scale_fill_manual(
+    values = paleta_partits_indepe,
+    limits = names(paleta_partits_indepe)
+  ) +
+   scale_colour_manual(
+    values = paleta_partits_indepe,
+    limits = names(paleta_partits_indepe)
+  ) +
+  theme_minimal()
+
+#Exportar per acabats amb Adobe Illustrator
+ggsave("cat10nIndepe.svg")
+```
+
+
+```{r}
+#28Aindepe
+
+plot <- ggtern(data=cat28aIndepe, aes(x=ptg_jxcat, y=ptg_erc, z=ptg_cupfr, fill=primer, colour=primer)) +
+  geom_point(shape=21, alpha = 0.5, size=0.9) +
+  theme(legend.position = "none") +
+  scale_fill_manual(
+    values = paleta_partits_indepe,
+    limits = names(paleta_partits_indepe)
+  ) +
+   scale_colour_manual(
+    values = paleta_partits_indepe,
+    limits = names(paleta_partits_indepe)
+  ) +
+  theme_minimal()
+
+plot
+
+#Exportar per acabats amb Adobe Illustrator
+ggsave("cat28aIndepe.svg")
+```
+
+
+### Anàlisi partits de dretes
+
+```{r}
+cat10nDreta <- select(cat10n, municipi, ptg_pp, ptg_vox, ptg_cs)
+cat28aDreta <- select(cat28a, municipi, ptg_pp, ptg_vox, ptg_cs)
+```
+
+Buscar partit guanyador entre els tres:
+
+```{r}
+cat10nDreta$primer <- colnames(cat10nDreta[2:4])[apply(cat10nDreta[2:4],1,which.max)]
+
+cat28aDreta$primer <- colnames(cat28aDreta[2:4])[apply(cat28aDreta[2:4],1,which.max)]
+```
+
+Gràfics triangular:
+
+```{r}
+#Paleta colors partits dretes
+
+paleta_partits_dreta <- c(
+  "percentatge_pp" = "#4d94e3",
+  "percentatge_vox" = "#64c31e", 
+  "percentatge_cs" = "#fa7600"
+)
+```
+
+```{r}
+#10Ndreta
+
+plot <- ggtern(data=cat10nDreta, aes(x=ptg_pp, y=ptg_vox, z=ptg_cs, fill=primer, colour=primer)) +
+  geom_point(shape=21, alpha = 0.5, size=0.9) +
+  theme(legend.position = "none")  + 
+  scale_fill_manual(
+    values = paleta_partits_dreta,
+    limits = names(paleta_partits_dreta)
+  ) +
+   scale_colour_manual(
+    values = paleta_partits_dreta,
+    limits = names(paleta_partits_dreta)
+  ) +
+  theme_minimal()
+
+plot
+
+#Exportar per acabats amb Adobe Illustrator
+ggsave("cat10nDreta.svg")
+```
+
+
+```{r}
+#28Adreta
+
+plot <- ggtern(data=cat28aDreta, aes(x=ptg_pp, y=ptg_vox, z=ptg_cs, fill=primer, colour=primer)) +
+  geom_point(shape=21, alpha = 0.5, size=0.9) +
+  theme(legend.position = "none") +
+  scale_fill_manual(
+    values = paleta_partits_dreta,
+    limits = names(paleta_partits_dreta)
+  ) +
+   scale_colour_manual(
+    values = paleta_partits_dreta,
+    limits = names(paleta_partits_dreta)
+  ) +
+  theme_minimal()
+
+plot
+
+#Exportar per acabats amb Adobe Illustrator
+ggsave("cat28aDreta.svg")
+```
