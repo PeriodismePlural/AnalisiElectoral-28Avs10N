@@ -10,6 +10,6 @@ La suma de les tres variables ha de ser 100. Per això, en aquest cas calculem q
 
 Podeu veure com hem fet els gràfics amb el llenguatge d'anàlisi de dades R <a href="https://github.com/vicoliveres/AnalisiElectoral-28Avs10N/blob/master/analisi_10N_28A.Rmd">en aquest document</a> i reproduir-lo. 
 
-![Diagrama triangular: vot independentista](https://github.com/vicoliveres/mapping-catalan-elections-d3-cartogram/blob/master/CatCanviIndepe-01.jpg)
+![Diagrama triangular: vot independentista](https://github.com/vicoliveres/AnalisiElectoral-28Avs10N//blob/master/CatCanviIndepe-01.jpg)
 
-![Diagrama triangular: vot de dretes](https://github.com/vicoliveres/mapping-catalan-elections-d3-cartogram/blob/master/CatCanviDreta-01.jpg)
+![Diagrama triangular: vot de dretes](https://github.com/vicoliveres/AnalisiElectoral-28Avs10N/blob/master/CatCanviDreta-01.jpg)
