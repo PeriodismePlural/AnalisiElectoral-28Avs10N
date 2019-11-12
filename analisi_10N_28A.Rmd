@@ -42,9 +42,9 @@ Gràfics triangular:
 #Paleta colors partits independentistes
 
 paleta_partits_indepe <- c(
-  "percentatge_jxcat" = "#fc3a85",
-  "percentatge_erc" = "#faab00", 
-  "percentatge_cupfr" = "#ffe20a"
+  "ptg_jxcat" = "#fc3a85",
+  "ptg_erc" = "#faab00", 
+  "ptg_cupfr" = "#ffe20a"
 )
 ```
 
@@ -113,9 +113,9 @@ Gràfics triangular:
 #Paleta colors partits dretes
 
 paleta_partits_dreta <- c(
-  "percentatge_pp" = "#4d94e3",
-  "percentatge_vox" = "#64c31e", 
-  "percentatge_cs" = "#fa7600"
+  "ptg_pp" = "#4d94e3",
+  "ptg_vox" = "#64c31e", 
+  "ptg_cs" = "#fa7600"
 )
 ```
 
