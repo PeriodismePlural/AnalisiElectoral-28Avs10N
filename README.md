@@ -8,8 +8,8 @@ En un diagrama triangular, els punts més propers als vèrtexs o als eixos són 
 
 La suma de les tres variables ha de ser 100. Per això, en aquest cas calculem quin percentatge tindria cada partit si el total fos només la suma dels 3. Per exemple, a Granollers ERC va obtenir un 21.87% dels vots, JxCat un 13.52% i la CUP un 5.74%. El total suma %, per tant podriem dir que ERC va obtenir un % dels vots independentistes, JxCat un % i la CUP un %. Són aquests valors els que es dibuixen sobre els triangles. 
 
-Podeu veure com hem fet els gràfics amb el llenguatge d'anàlisi de dades R <a href="https://github.com/vicoliveres/AnalisiElectoral-28Avs10N/blob/master/analisi_10N_28A.Rmd">en aquest document</a> i reproduir-lo. 
+Podeu veure com hem fet els gràfics amb el llenguatge d'anàlisi de dades R <a href="https://github.com/PeriodismePlural/AnalisiElectoral-28Avs10N/blob/master/analisi_10N_28A.Rmd">en aquest document</a> i reproduir-lo. 
 
-![Diagrama triangular: vot independentista](https://github.com/vicoliveres/AnalisiElectoral-28Avs10N//blob/master/CatCanviIndepe-01.jpg)
+![Diagrama triangular: vot independentista](https://github.com/PeriodismePlural/AnalisiElectoral-28Avs10N/blob/master/CatCanviIndepe-01.jpg)
 
-![Diagrama triangular: vot de dretes](https://github.com/vicoliveres/AnalisiElectoral-28Avs10N/blob/master/CatCanviDreta-01.jpg)
+![Diagrama triangular: vot de dretes](https://github.com/PeriodismePlural/AnalisiElectoral-28Avs10N/blob/master/CatCanviDreta-01.jpg)
